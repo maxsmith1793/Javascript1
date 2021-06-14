@@ -10,9 +10,10 @@ function getCount() {
 }
 
 function printMotto(myMotto, myCount){
-   
-    for (myCount; myCount>0; myCount--) {
-        console.log(myCount + '. ' + myMotto);
+   let i = 0;
+    for (i; i<=myCount; i++) {
+        
+        console.log(i + '. ' + myMotto);
         
     }
 
