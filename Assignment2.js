@@ -9,19 +9,20 @@ function getCount() {
 
 }
 
-function printMotto(myMotto, myCount){
-   let i = 0;
+function printMotto(myMotto, myCount){ //Is it okay to use the same name as previous variables that were used in above function?
+   let i = 1;
     for (i; i<=myCount; i++) {
         
-        console.log(i + '. ' + myMotto);
+     console.log(i + '. ' + myMotto);
         
     }
+//Do I need a return here?
 
 }
 
 let a = getMotto();
 let b = getCount();
-let c = printMotto(a, b)
+printMotto(a, b);
 
 
 

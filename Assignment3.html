@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {text-align: center;}
+
+        h1 {font-weight: bold;
+            color: navy;
+            text-decoration: underline;
+            font-family: Helvetica, Arial, sans-serif;}
+
+    </style>
+    <script src="/Assignment3.js"></script>
+</head>
+<body>
+    <h1>Welcome to our "Add an Image to the Webpage Program"</h1>
+    <p>Please copy and paste the URL of an image in the text box, and it will appear on the webpage!</p>
+        <!-- <form name="myForm" onsubmit="showImage()"> -->
+     <input type="text" name="imageURL" placeholder="URL goes here" id="imageURL">
+            <!-- <input type="submit" value="Submit"> -->
+        <!-- </form> -->
+    <button onclick="showImage()">Show my image on the screen!</button>
+
+    <button onclick="DeleteImg()">Delete All Images</button>
+
+    <p id="imageContainer"></p>
+    <p>
+        Try pressing the button multiple times to see what happens!
+    </p>
+</body>
+</html>
