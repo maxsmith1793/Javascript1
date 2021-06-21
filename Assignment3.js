@@ -40,11 +40,7 @@ function showImage() {
   if (/(jpg|gif|png|JPG|GIF|PNG|JPEG|jpeg)$/.test(URL)){
     return true;
   }
-  else if(/^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/.test(URL))
-    {
-      return true;
 
-    }
   
   else {return false}
  }

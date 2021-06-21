@@ -1,22 +1,33 @@
+
+
+
 function submitData() {
 
     let minRange = parseFloat(guessForm.min.value);
     let maxRange = parseFloat(guessForm.max.value);
-    if(isNaN(minRange)) {
-        updateDOM(`There was an error in your input. Please make sure to enter numbers and that the minimum is less than the maximum.`, "red");  //Validating the maximum value as a number.
-        }
-        else if(isNaN(maxRange))
-        {
-            updateDOM(`There was an error in your input. Please make sure to enter numbers and that the minimum is less than the maximum.`, "red");
-        }
 
-        else if(maxRange < minRange){ //Tests if the minimum number in the range is less than the maximum number and displays an error if it the statement is true.
-            updateDOM('There was an error in your input. Please make sure to enter numbers and that the minimum is less than the maximum.', "red");
+    if(isNaN(minRange) || isNaN(maxRange) || minRange>=maxRange){
+        updateDOM(`There was an error in your input. Please make sure to enter numbers and that the minimum is less than the maximum.`, "red");
+
+     }
+     else {numberGuessGame(minRange, maxRange);
         }
-        else {
-           numberGuessGame(minRange, maxRange)
-        }
-}
+    // if(isNaN(minRange)) {
+    //     updateDOM(`There was an error in your input. Please make sure to enter numbers and that the minimum is less than the maximum.`, "red");  //Validating the maximum value as a number.
+    //     }
+    //     else if(isNaN(maxRange))
+    //     {
+    //         updateDOM(`There was an error in your input. Please make sure to enter numbers and that the minimum is less than the maximum.`, "red");
+    //     }
+
+    //     else if(maxRange < minRange){ //Tests if the minimum number in the range is less than the maximum number and displays an error if it the statement is true.
+    //         updateDOM('There was an error in your input. Please make sure to enter numbers and that the minimum is less than the maximum.', "red");
+    //     }
+    //     else {
+    //        numberGuessGame(minRange, maxRange)
+    //     }
+
+    }
 
 function updateDOM(value, color) {   //This function updates the DOM depending on what parameters are passed through it through other functions.
     document.getElementById("validation").innerHTML = value;
@@ -62,5 +73,5 @@ function randomNumber(min,max) {    //THIS CODE IS SUPPOSED TO RETURN AN INTEGER
 }
 
 
-//ERRORS: Low numbers not validating properly, particularly if min>max.  Low numbers not computing properly, sometimes number is outside of given range.
+//ERRORS:
 //  Trouble refreshing once the program has been run.
